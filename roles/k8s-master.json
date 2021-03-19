@@ -1,8 +1,8 @@
 {
-    "name": "k8s_master_YOUR_CLUSTER_ID",
+    "name": "k8s-master",
     "default_attributes": {
       "kubernetes_chef_cookbook": {
-        "cluster_id": "YOUR_CLUSTER_ID",
+        "cluster_id": "1",
         "root_ca": {
           "ca": "/path/to/ca.pem",
           "ca_key": "/path/to/ca-key.pem"
@@ -11,7 +11,7 @@
     },
     "chef_type": "role",
     "json_class": "Chef::Role",
-    "description": "The role to identify the server as a master in the cluster YOUR_CLUSTER_ID.",
+    "description": "The role to identify the server as a master in the cluster 1.",
     "run_list": [
       "recipe[kubernetes_chef_cookbook]"
     ]

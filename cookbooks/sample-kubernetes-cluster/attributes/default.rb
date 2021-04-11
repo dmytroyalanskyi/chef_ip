@@ -4,3 +4,5 @@ default['sample-kubernetes-cluster']['kernel']['load_modules'] = %w(overlay br_n
 default['sample-kubernetes-cluster']['kube']['kube_packages'] = { 'kubelet' => '1.20.1-00', 'kubeadm' => '1.20.1-00', 'kubectl' => '1.20.1-00' }
 
 default['sample-kubernetes-cluster']['master']['default_network_cidr'] = '192.168.0.0/16'
+default['sample-kubernetes-cluster']['master']['default_admin_user'] = 'ubuntu'
+default['sample-kubernetes-cluster']['master']['network_addon_url'] = 'https://docs.projectcalico.org/manifests/calico.yaml'

@@ -10,10 +10,10 @@ name 'sample-kubernetes-cluster'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'sample-kubernetes-cluster::default'
-run_list 'sample-kubernetes-cluster::base_packages'
-run_list 'sample-kubernetes-cluster::kernel'
-run_list 'sample-kubernetes-cluster::containerd'
-run_list 'sample-kubernetes-cluster::kube'
+run_list 'sample-kubernetes-cluster::base_packages', 'sample-kubernetes-cluster::kernel', 'sample-kubernetes-cluster::containerd', 'sample-kubernetes-cluster::kube', 'sample-kubernetes-cluster::master'
+#run_list 'sample-kubernetes-cluster::base_packages'
+#run_list 'sample-kubernetes-cluster::kernel'
+#run_list 'sample-kubernetes-cluster::containerd'
+#run_list 'sample-kubernetes-cluster::kube'
 # Specify a custom source for a single cookbook:
 cookbook 'sample-kubernetes-cluster', path: '.'

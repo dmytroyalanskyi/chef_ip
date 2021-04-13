@@ -1,0 +1,18 @@
+{
+    "name": "k8s-worker",
+    "default_attributes": {
+      "kubernetes_chef_cookbook": {
+        "cluster_id": "01"
+      }
+    },
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "The role to identify the server as a master in the cluster 1.",
+    "run_list": [
+      "recipe[sample-kubernetes-cluster::base_packages]",
+      "recipe[sample-kubernetes-cluster::kernel]",
+      "recipe[sample-kubernetes-cluster::containerd]",
+      "recipe[sample-kubernetes-cluster::kube]",
+      "recipe[sample-kubernetes-cluster::worker]"
+    ]
+  }
